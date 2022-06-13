@@ -19,7 +19,13 @@ const mainVue = new Vue({
         listItems: listElements,
 },
     methods: {
-        delate: function(item) {
+        addItem: function() {
+            this.listItems.push({
+                text: ``,
+                done: false,
+            },)
+        },
+        delateItem: function(item) {
             this.listItems.splice(item, 1);
         },
 }

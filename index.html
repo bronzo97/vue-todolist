@@ -19,13 +19,19 @@
                 <div class="col d-flex justify-content-center">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">To do List</h5>
+                            <h1 class="card-title text-center">To do List</h1>
                             <ul>
                                 <li v-for="item in listItems"
                                     :class="item.done === true ? 'text-decoration-line-through' : '' " class="list-item">
                                     {{item.text}}
-                                    <i class="fa-solid fa-trash" @click="delate"></i>
+                                    <i class="fa-solid fa-trash" @click="delateItem"></i>
                                 </li>
+                                <div class="input-group mb-3 pt-3">
+                                    <input type="text" class="form-control" placeholder="Inserisci un elemento" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" @click="addItem">Inserisci</button>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                     </div>
