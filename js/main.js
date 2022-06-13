@@ -17,13 +17,20 @@ const mainVue = new Vue({
 
     data: {
         listItems: listElements,
+        newText: '',
+        // addItem: {
+        //     newText: '',
+        //     done: false,
+        // },
 },
     methods: {
-        addItem: function() {
-            this.listItems.push({
-                text: ``,
-                done: false,
-            },)
+        pushItem: function() {
+            this.listItems.push(
+                {
+                    text: this.newText,
+                    done: false,
+                },
+            );
         },
         delateItem: function(item) {
             this.listItems.splice(item, 1);
