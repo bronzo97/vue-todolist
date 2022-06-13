@@ -19,6 +19,8 @@ const mainVue = new Vue({
         listItems: listElements,
 },
     methods: {
-
+        delate: function(item) {
+            this.listItems.splice(item, 1);
+        },
 }
 });
