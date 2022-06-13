@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+    background: rgb(0,212,255);
+    background: linear-gradient(133deg, rgba(0,212,255,1) 0%, rgba(23,9,121,1) 100%);
+}
+
+.card {
+    width: 18rem;
+    /* margin: 0 auto; */
+}
+
+.list-item {
+    list-style: none;
+}
